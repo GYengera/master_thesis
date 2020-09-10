@@ -44,13 +44,13 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{2.0ex plus0.5ex minus0.2ex}
 \usepackage{vmargin}
-\setmarginsrb           { 1.5in}  % left margin
+\setmarginsrb           { 1.2in}  % left margin
                         { 0.6in}  % top margin
-                        { 1.0in}  % right margin
+                        { 1.2in}  % right margin
                         { 0.8in}  % bottom margin
-                        {  20pt}  % head height
+                        { 20pt}  % head height
                         {0.25in}  % head sep
-                        {   9pt}  % foot height
+                        {  9pt}  % foot height
                         { 0.3in}  % foot sep
 \raggedbottom
 \setlength{\topskip}{1\topskip \@plus 5\p@}
@@ -186,6 +186,7 @@
   \lhead{Appendix \thechapter. \emph{#2}}
   \label{appendix:#1}
   \input{\appendixpath #1}
+  \addtocounter{chapter}{1}
 }
 
 
@@ -235,22 +236,22 @@
     \begin{center}
       \setlength{\parskip}{0pt}
       {\LARGE \bf \TITLE \par}
-      \smallskip
+      \bigskip
       by \\
-	 
+
 	  {\large \textbf{\authornames} \\[1cm]}
 
       {\Large \textbf{\thesisname} \\[1cm]}
 
       {\large \groupname \par}
       {\large \facname \par}
+      \bigskip
       {\large \deptname \par}
       {\large \univname \par}
       \bigskip
       \bigskip
       \bigskip
-      {\large Supervisor \\ \textbf{\supname} \\[0.6cm]}
-      \smallskip
+      
       {\large Advisor \\ \textbf{\advname} \\[1.1cm]}
       \smallskip
       \doifnotproposal{
@@ -278,7 +279,7 @@
   \global\let\author\relax
   \global\let\date\relax
   \global\let\and\relax
-  \cleardoublepage
+  \clearpage
 }
 
 \newenvironment{declaration}{
@@ -296,17 +297,17 @@
   \null\vfil
   \begin{center}
     \setlength{\parskip}{0pt}
-    {\normalsize \UNIVNAME \par}
-    {\normalsize \groupname \par}
-    {\normalsize \deptname \par}
-    \bigskip
-    \bigskip
+    % {\normalsize \UNIVNAME \par}
+    % {\normalsize \groupname \par}
+    % {\normalsize \deptname \par}
+    % \bigskip
+    % \bigskip
     {\huge{\textit{Abstract}} \par}
     \bigskip
     \bigskip
-    {\normalsize\bf \TITLE \par}
-    {\normalsize by \authornames \par}
-    \bigskip
+    % {\normalsize\bf \TITLE \par}
+    % {\normalsize by \authornames \par}
+    % \bigskip
   \end{center}
 }{
   \ifx\keywordnames\empty
@@ -317,7 +318,7 @@
     {\scriptsize{Keywords: \keywordnames} \par}
   \fi
   \vfil\vfil\vfil\null
-  \cleardoublepage
+  \clearpage
 }
 
 
